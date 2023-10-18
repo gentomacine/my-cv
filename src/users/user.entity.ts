@@ -6,7 +6,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
     id: Number;
 
     @Column()
-    email: String;
+    email: string;
 
     @Column()
     password: string
