@@ -20,7 +20,9 @@ export class UsersService {
         return this.repo.find({ where: { email } });
       }
 
-    update(){}
+    async update(id:number, attrs:Partial<User>){
+        const user = await this.findOne(id)
+    }
 
     remove(){}
 
