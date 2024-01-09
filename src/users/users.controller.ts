@@ -17,7 +17,7 @@ constructor(private usersService:UsersService){}
 
     @Get()
     findAllusers(@Query('email') email:string){
-        return this.usersService.find(email)
+        return this.usersService.find(emai)
     };
 
     @Delete('/:id')
