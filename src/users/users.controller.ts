@@ -28,7 +28,7 @@ constructor(private usersService:UsersService){}
 
      @Patch('/:id')
      updateUser(@Param('id') id:string, @Body() body: UpdateUserDto){
-        return this.usersService.update(parseInt(id), body)
+        return this.usersService.update(parseInt(id), body);
      }
 
 }

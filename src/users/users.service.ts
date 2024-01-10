@@ -10,7 +10,7 @@ export class UsersService {
     create(email:string, password: string){
         const user = this.repo.create({ email, password});
 
-        return this.repo.save(user);
+        return this.repo.save( user);
     };
     findOne(id: number){
         return this.repo.findOne({id});
@@ -21,13 +21,13 @@ export class UsersService {
         return this.repo.find({ where: { email } });
       }
 
-    async update(id:number, attrs:Partial<User>){
-        const user = await this.findOne(id)
+    async update(id: number, attrs: Partial<User>) {
+        const user = await this.findOne(id);
         if (!user){
             throw new NotFoundException("user not found")
-        };
-        Object.assign(user,attrs);
-        return this.repo.save(user)
+        }
+        Object.assign(user, attrs);
+        return this.repo.save(user);
     }
 
     async remove(id:number){
