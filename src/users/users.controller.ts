@@ -7,8 +7,6 @@ import { Body,
          Param, 
          Query, 
          NotFoundException, 
-         UseInterceptors, 
-         ClassSerializerInterceptor
          } from '@nestjs/common';
 
 import { CreateUserDto } from './dtos/create-user.dto';
